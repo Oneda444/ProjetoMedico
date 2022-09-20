@@ -1,0 +1,987 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: none;
+	font-family: 'Poppins', sans-serif;
+}
+
+:root{
+	--corPrincipal: #38CB89;
+	--corTexto: rgb(59, 59, 59);
+	--corInput: rgb(222, 222, 222);
+	--corPrincipalHover: #229963;
+	--corFundo: #F6F6F6;
+	--corTextoMenu: #868686;
+	--Gradient: linear-gradient(27deg, rgba(56,203,137,1) 0%, rgba(111,215,171,1) 85%);
+}
+
+label{
+	margin: 0;
+}
+
+p{
+	margin: 0;
+}
+
+.BackgroundLogin{
+	background-color: var(--corFundo);
+	height: 100vh;
+	display: flex;
+    align-items: center;
+	position: relative;
+	overflow: hidden;
+}
+
+/* .BackgroundLogin::after{
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	content: "";
+	top: -10rem;
+	right: -10rem;
+	background-color: #FAFCFE;
+	border-radius: 100rem;
+	border: 5rem solid#38CB89;
+	opacity: 0.2;
+} */
+
+.loginIndex{
+	z-index: 2;
+	width: 75%;
+	height: 80%;
+	margin: auto;
+	display: flex;
+	box-shadow: 0px 0px 48px -21px rgba(0,0,0,.2);
+}
+
+.loginDireita{
+	position: relative;
+	width: 50%;
+	height: 100%;
+	background: var(--Gradient);
+	border-radius: 0 1rem 1rem 0;
+}
+
+.loginDireita::after{
+	content: "";
+  	background: url(../img/medicowallpaper.jpg);
+  	opacity: 0.6;
+  	top: 0;
+  	left: 0;
+  	bottom: 0;
+  	right: 0;
+  	position: absolute;
+  	z-index: 1; 
+  	background-position: center;
+	background-size: cover; 
+	border-radius: 0 1rem 1rem 0;
+}
+
+.loginBrancoEsquerda{
+	width: 50%;
+	height: 100%;
+	background-color: white;
+	display: flex;
+	border-radius: 1rem 0 0 1rem;
+}
+
+.ConteudoLoginBranco{
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	width: 60%;
+}
+
+.tituloLoginIndex{
+	color: var(--corTexto);
+}
+
+.tituloInput{
+	margin-top: 2rem;
+	margin-bottom: 0.4rem;
+	font-weight: 500;
+	font-size: .8rem;
+	color: var(--corTexto);
+}
+
+.InputIndex{
+	border-radius: 100rem;
+	padding: 0.8rem 1.5rem;
+	border: .1px solid var(--corInput);
+	font-size: .8rem;
+}
+
+.InputIndex:focus{
+	border: .1px solid var(--corPrincipal);
+	outline: none;
+}
+
+.LembrarEsqueciASenha{
+	display: flex;
+	margin-top: 2rem;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.LembrarMinhaSenhaIndex{
+	display: flex;
+	align-items: center;
+	color: var(--corTexto);
+	
+}
+
+.LabelLembrarLogin{
+	margin: 0;
+	margin-left: .5rem;
+	font-size: .8rem;
+	font-weight: 500;
+}
+
+.InputCheckboxLembrarSenha:checked{
+	accent-color: var(--corPrincipal);
+}
+
+.LogarIndex{
+	margin-top: 2rem;
+}
+
+.BtnLogarIndex{
+	width: 100%;
+	background: var(--Gradient);
+	border: none;
+	padding: .8rem;
+	border-radius: 100rem;
+	cursor: pointer;
+	color: white;
+	transition: .3s;
+}
+
+.BtnLogarIndex:hover{
+	box-shadow: 0px 14px 25px 5px rgba(46, 134, 61, 0.2);
+	transform: translateY(-.2rem);
+	transition: .3s;
+}
+
+.EsqueciMinhaSenha{
+	font-size: .8rem;
+	font-weight: 500;
+	color: var(--corPrincipal);
+	transition: .3s;
+}
+
+.EsqueciMinhaSenha:hover{
+	transform: translateY(-.1rem);
+	color: var(--corPrincipalHover);
+	transition: .3s;
+}
+
+.NaoTemSenhaSeCadastre{
+	font-size: .8rem;
+	margin-top: 2rem;
+	display: flex;
+	gap: .3rem;
+	color: var(--corTexto);
+}
+
+.PSeCadastre{
+	color: var(--corPrincipal);
+	cursor: pointer;
+	transition: .3s;
+}
+
+.PSeCadastre:hover{
+	color: var(--corPrincipalHover);
+	transition: .3s;
+}
+
+.DisplayNone{
+	display: none;
+}
+
+@media (max-width: 1303px) {
+	.loginIndex{
+		flex-direction: column;
+	}
+	.loginDireita{
+		display: none;
+	}
+	.loginBrancoEsquerda{
+		width: 100%;
+		border-radius: 0;
+		padding-top: 2rem;
+	}
+}
+
+@media (max-width: 643px){
+	.loginIndex{
+		width: 100vw;
+		height: 100vh;
+	}
+	.ConteudoLoginBranco{
+		width: 80%;
+	}
+}
+/* ! ------------ FIM DO INDEX ------------  */
+
+
+
+
+
+
+
+
+
+
+/* ! ------------ COMEÇO DA DASHBOARD ------------  */
+.BackgroundDash{
+	background-color: var(--corFundo);
+}
+
+.Dashboard{
+	margin-left: 11rem;
+	padding: 3rem;
+}
+
+.TopInformacoes{
+	width: 100%;
+	height: 5rem;
+	display: flex;
+	gap: 2rem;
+	justify-content: space-between;
+	margin-top: 3.5rem;
+}
+
+.totalTop{
+	width: 11rem;
+	height: 100%;
+	background-color: white;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.tituloTopInformacoes{
+	font-size: .8rem;
+	color: var(--corTextoMenu);
+}
+
+.SubtituloTopInformacoes{
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+
+.UltimoMedico{
+	width: 20rem;
+}
+
+/* .ListaTotal{
+	width: 100%;
+	height: 100vh;
+	background-color: white;
+} */
+
+.UsersLista{
+	width: 100%;
+	background-color: white;
+}
+
+.ItensTopLista{
+	width: 100%;
+	border-bottom: .1px solid var(--corInput);
+	display: flex;
+	padding: .8rem 1.4rem;
+	justify-content: center;
+	background-color: white;
+}
+
+.ItensTopLista p{
+	font-size: .8rem;
+	width: 14%;
+	transition: .3s;
+}
+
+.ItensTopListaFixed p{
+	font-size: .7rem !important; 
+	transition: .3s;
+}
+
+.topTituloBtnLista{
+	display: flex;
+	justify-content: space-between;
+	padding: 1.4rem 2rem;
+	align-items: center;
+	border-top: 1.7rem solid var(--corFundo);
+	transition: .3s;
+	background-color: white;
+}
+
+/* .topTituloBtnListaFixed{
+	padding: .8rem 2rem .4rem 2rem;
+	transition: .3s;
+	font-size: .9rem;
+} */
+
+.TituloTodos{
+	font-size: .9rem;
+	font-weight: 600;
+}
+
+.BtnAdicionarNovoPaciente{
+	display: flex;
+	align-items: center;
+	background: var(--Gradient);
+	border: none;
+	border-radius: .4rem;
+	color: white;
+	padding: .4rem .8rem;
+	gap: .8rem;
+	fill: white;
+	transition: .3s;
+}
+
+.BtnAdicionarNovoPaciente:hover{
+	transform: translateY(-.1rem);
+	cursor: pointer;
+	box-shadow: 0px 0px 26px -10px rgba(67,158,47,1);
+	transition: .3s;
+}
+
+.User1{
+	padding: .5rem 1.4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: .8rem;
+	transition: .2s;
+}
+
+.User1:hover{
+	box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.1);
+	transition: .2s;
+}
+
+.User1 p{
+	width: 14%;
+}
+
+.imgUser1{
+	width: 2rem;
+	height: 2rem;
+	background-image: url(../img/pessoa.jpeg);
+	box-shadow: 0px 0px 26px -10px rgba(0,0,0,0.7);
+	border-radius: 100rem;
+	background-position: center;
+	background-size: cover;
+}
+
+.imgUser1Medico{
+	width: 2rem;
+	height: 2rem;
+	background-image: url(../img/medico.webp);
+	box-shadow: 0px 0px 26px -10px rgba(0,0,0,0.7);
+	border-radius: 100rem;
+	background-position: center;
+	background-size: cover;
+}
+
+.NomeFoto{
+	display: flex;
+	gap: .8rem;
+	align-items: center;
+}
+
+.MedicoFoto{
+	display: flex;
+	gap: .8rem;
+	align-items: center;
+}
+
+#IdUser{
+	width: 8%;
+}
+
+#IdNomeFotoMedico{
+	width: 18%;
+}
+
+.btnAbrirPerfil{
+	display: flex;
+	align-items: center;
+	gap: .8rem;
+	padding: .4rem .8rem;
+	border: none;
+	border-radius: .3rem;
+	color: var(--corTextoMenu);
+	fill: var(--corTextoMenu);
+	transition: .3s;
+}
+
+.btnAbrirPerfil:hover{
+	color: white;
+	fill: white;
+	background-color: var(--corPrincipal);
+	cursor: pointer;
+	box-shadow: 0px 0px 26px -10px rgba(67,158,47,1);
+	transform: translateY(-.1rem);
+	transition: .3s;
+}
+
+.fixed{
+	position: fixed;
+	width: 82.09%;
+	top: 64px;
+	transition: .3s;
+	background: red;
+}
+
+.UsersListaFixed{
+	position: fixed;
+	top: 70px;
+}
+
+/* ! ------------ FIM DA DASHBOARD ------------  */
+
+
+
+
+
+
+
+
+
+
+/* ! ------------ COMEÇO DO HEADER ------------  */
+
+.bodyHeader{
+	position: fixed;
+	width: 100%;
+}
+
+.MenuLateral{
+	width: 11rem;
+	height: calc(100vh - 4rem);
+	background-color: white;
+	box-shadow: 0px 0px 35px -14px rgba(0,0,0,0);	
+	padding-top: 2rem;
+	padding-left: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-bottom: 1rem;
+	position: absolute;
+}
+
+.tituloMenu{
+	font-weight: 500;
+	margin-bottom: 2rem;
+}
+
+.itemDoMenu{
+	display: flex;
+	align-items: center;
+	gap: .8rem;
+	transition: .3s;
+	position: relative;
+}
+
+.itemMenuLateral::before{
+	position: absolute;
+	content: "";
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 2rem;
+	height: 1.5rem;
+	background-color: var(--corPrincipal);
+	transform: translateX(-3.6rem);
+}
+
+.itemDoMenu:hover{
+	transform: translateX(.3rem);
+	transition: .3s;
+	cursor: pointer;
+}
+
+.SetaDireitaIconMenu{
+	opacity: 0;
+	transition: .3s;
+}
+
+.itemDoMenu:hover .SetaDireitaIconMenu{
+	opacity: 1;
+	transition: .3s;
+}
+
+.itemDoMenu:hover .TextMenu{
+	color: var(--corPrincipal);
+	transition: .3s;
+}
+
+.TextMenu{
+	font-size: .8rem;
+	color: var(--corTextoMenu);
+	transition: .3s;
+	font-weight: 300;
+}
+
+.SvgMenu{
+	fill: var(--corTextoMenu);
+	transition: .3s;
+}
+
+.itemDoMenu:hover .SvgMenu{
+	fill: var(--corPrincipal);
+	transition: .3s;
+}
+
+.itemDoMenu{
+	margin-bottom: 1rem;
+}
+
+.MeuPerfil{
+	margin-top: 2rem;
+}
+
+.versãoDash{
+	font-size: .6rem;
+	color: var(--corPrincipal);
+}
+
+.header{
+	width: 100%;
+	height: 4rem;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 4rem;
+	box-shadow: 0px 0px 26px -10px rgba(0,0,0,0.1);
+}
+
+.buscaMedicoHeader{
+	display: flex;
+	align-items: center;
+	gap: .4rem;
+	border: .1px solid var(--corInput);
+	padding: .2rem 1.4rem .2rem .8rem;
+	border-radius: 1rem;
+	transition: .3s;
+}
+
+.inputBuscaMedicoHeader{
+	border: none;
+	font-size: .8rem;
+	padding: .2rem;
+	width: 28rem;
+}
+
+.inputBuscaMedicoHeader:focus{
+	outline: none;
+}
+
+/* .buscaMedicoHeader:focus-within{
+	border: .1px solid var(--corPrincipal);
+	transition: .3s;
+}
+
+.buscaMedicoHeader:hover{
+	border: .1px solid var(--corPrincipal);
+	transition: .3s;
+} */
+
+.SvgBuscaHeader{
+	fill: var(--corTexto);
+}
+
+.PerfilAcessando{
+	z-index: 99;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	background-color: white;
+	padding: .8rem;
+	transform: translateY(-3.05rem);
+
+}
+
+.imagemPerfilAcessandoHeader{
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 100rem;
+	background-image: url(../img/pessoa.jpeg);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+	background-position: center;
+	background-size: contain;
+}
+
+.NomeUsuarioHeader{
+	font-size: .8rem;
+}
+
+.ProfissaoUsuario{
+	font-size: .6rem;
+	color: var(--corInput);
+}
+
+.SvgSetaAbrirPerfil{
+	fill: var(--corTexto);
+	transition: .3s;
+}
+
+.SvgSetaAbrirPerfil:hover{
+	fill: var(--corPrincipal);
+	transition: .3s;
+	cursor: pointer;
+}
+
+.OpcoesPerfilAcessando{
+	width: 12rem;
+	height: 6rem;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: .3s;
+	transform: translate(8rem, -1rem);
+}
+
+.ItemPerfilAcessando{
+	margin: 1rem 0;
+}
+
+.MenuDown{
+	transform: translate(8rem, 7rem);
+	box-shadow: 0px 0px 26px -10px rgba(0,0,0,0.2);
+	transition: .3s;
+}
+
+.Svg180deg{
+	transform: rotate(180deg);
+	transition: .3s;
+	fill: var(--corPrincipal);
+}
+
+.MensagemNotificacaoHeader{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	margin-right: 2rem;
+}
+
+.NotMsgSvg{
+	fill: var(--corTexto);
+	transition: .3s;
+}
+
+.NotMsgSvg:hover{
+	fill: var(--corPrincipal);
+	cursor: pointer;
+	transition: .3s;
+}
+/* ! ------------ FINAL DO HEADER ------------  */
+
+
+
+
+
+
+
+
+
+
+/* ! ------------ COMEÇO DO CONFIRMAR TIPO ------------ */
+.BodyConfirmarTipo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--corFundo);
+}
+
+.contentConfirmarTipo{
+	width: 75%;
+	height: 80vh;
+	background-color: white;
+	box-shadow: 0px 0px 48px -21px rgba(0,0,0,.2);
+	display: flex;
+}
+
+.ConfirmarTipoEsquerda{
+	height: 100%;
+	width: 35%;
+	background: var(--Gradient);
+	border-radius: .4rem 0 0 .4rem;	
+}
+
+.ConfirmarTipoDireita{
+	height: 100%;
+	background-color: white;
+	width: 75%;
+	border-radius: 0 .4rem .4rem 0;	
+	padding: 4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.tituloConfirmar{
+	font-weight: 600;
+}
+
+.descriçãoTituloConfirmar{
+	font-size: .8rem;
+	color: var(--corTextoMenu);
+	margin-bottom: 3rem;
+}
+
+.itemConfirmar{
+	background-color: white;
+	margin-bottom: 1.4rem;
+	padding: 2rem;
+	box-shadow: 0px 12px 36px -7px rgba(0,0,0,0.08);
+	width: 60%;
+	border-radius: .8rem;
+	cursor: pointer;
+	color: var(--corTexto);
+	display: flex;
+	align-items: center;
+	gap: 1.8rem;
+	font-weight: 600;
+	border: .2rem solid white;
+	transition: .3s;
+}
+
+.SvgConfirmar{
+	fill: var(--corPrincipal);
+}
+
+.itemConfirmar:hover{
+	background-color: rgba(114, 235, 144, 0.333);
+	box-shadow: 0px 12px 36px -7px rgba(0,0,0,0.0);
+	border: .2rem solid var(--corPrincipal);
+	transition: .3s;
+	transform: translateX(.4rem);
+}
+/* ! ------------ FINAL DO CONFIRMAR TIPO ------------ */
+
+
+
+
+
+
+
+
+
+
+/* ! ------------ COMEÇO DO CADASTRAR MÉDICO ------------ */
+.BodyCadastrarMedico{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--corFundo);
+}
+
+.contentCadastrarMedico{
+	background-color: white;
+	width: 80vw;
+	height: 80vh;
+	padding: 2rem;
+	box-shadow: 0px 0px 48px -21px rgba(0,0,0,.2);
+	border-radius: .8rem;
+	display: flex;
+}
+
+.BtnInputsCadastrar{
+	display: flex;
+}
+
+.SessaoSectionInfosCadastrarMedico{
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.SectionFotoMedico{
+	height: 100%;
+	margin-right: 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: .4rem;
+}
+
+.FormImgMedico{
+	width: 70%;
+	height: 100%;
+}
+
+.input-file-upload-CadastrarMedico{
+	width: 100%;
+}
+
+.BotaoFotoCadastrarMedico{
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-weight: 500;
+	border: 1px dashed var(--corPrincipal);
+	padding: .4rem .8rem;
+	background: none;
+	color: var(--corPrincipal);
+	border-radius: .4rem;
+	display: flex;
+	gap: .8rem;
+	align-items: center;
+	fill: var(--corPrincipal);
+	transition: .3s;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.BotaoFotoCadastrarMedico:hover{
+	color: var(--corPrincipalHover);
+	fill: var(--corPrincipalHover);
+	border: 1px dashed var(--corPrincipalHover);
+}
+
+#FotoMedicoCadastrar{
+	font-size: 10px;
+	z-index: -1;
+}
+
+.DivUploadFotoCadastrarMedico{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.sectionInfosCadastrarMedico{
+	display: flex;
+	gap: 1rem;
+}
+
+.infoCadastroMedico{
+	display: flex;
+	flex-direction: column;
+}
+
+.CadastrarMedicoInput{
+	padding: .4rem;
+	border: 1px solid var(--corInput);
+	border-radius: .4rem;
+	transition: .3s;
+}
+.CadastrarMedicoInput:focus{
+	outline: none;
+	border: 1px solid var(--corPrincipal);
+}
+.CadastrarMedicoInput:hover{
+	border: 1px solid var(--corPrincipal);
+	transition: .3s;
+}
+
+.CadastrarMedicoLabel{
+	font-size: .8rem;
+	font-weight: 600;
+}
+
+.EspecialidadeSelect{
+	width: 13.5rem;
+}
+
+.SessaoSectionInfosCadastrarMedico2{
+	margin-top: 3rem;
+}
+
+.btnEnviarCadastroMedico{
+	display: flex;
+	align-items: center;
+	background: var(--Gradient);
+	border: none;
+	border-radius: .4rem;
+	color: white;
+	padding: .4rem .8rem;
+	gap: .8rem;
+	fill: white;
+	transition: .3s;
+	cursor: pointer;
+	margin-top: 3rem;
+	width: 8.5rem;
+}
+
+.btnEnviarCadastroMedico:hover{
+	transform: translateY(-.2rem);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,.15);
+}
+
+.FotoMedicoPrevia{
+	background-color: var(--corFundo);
+	width: 100%;
+	height: 400rem;
+}
+
+.input-file-upload {
+    display: flex;
+    flex-direction: column;
+}
+
+.upload-btn{
+    overflow: hidden;
+    display: inline-block;
+}
+
+.btn{
+    width: 100%;
+    border: 2px dashed var(--corPrincipal);
+    font-weight: 500;
+    text-align: center;
+    padding: 1rem;
+	color: var(--corPrincipal);
+	background: white;
+}
+
+.btn:hover{
+    border: 2px dashed var(--corPrincipalHover);
+	color: var(--corPrincipalHover);
+}
+
+.upload-btn input[type=file] {
+    font-size: -1px;
+    position: absolute;
+    left: 0;
+    top: -100rem;
+    opacity: 0;
+}
+
+.upload_img {
+    display: inline-block;
+    width: 100%;
+    height: 29vw;
+    object-fit: cover;
+    object-position: 50% 50%;
+    vertical-align: middle;
+    margin-top: 20px;
+}
+
+.containerDivImagem{
+	width: 100%;
+}
+
+
+
+/* ! ------------ FINAL DO CADASTRAR MÉDICO ------------ */
+
+
+

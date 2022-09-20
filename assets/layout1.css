@@ -1,0 +1,33 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+}
+
+header{
+	background-color: #EEE;
+	padding: 50px;
+	text-align: center;
+}
+
+.coluna{
+	float: left;
+	padding: 10px;
+	height: 300px;
+}
+
+.coluna.side{
+	width: 25%
+}
+
+.coluna.middle{
+	width: 50%
+}
+
+footer{
+	background: #DDD;
+	padding: 10px;
+	text-align: center;
+}
